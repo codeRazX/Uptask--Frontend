@@ -55,3 +55,6 @@ This project includes both the **frontend** (React + TypeScript) and the **backe
 - Fast, responsive drag & drop powered by optimized requests
 - Seamless communication between frontend and backend via REST API
 
+---
+
+Backend is available is a [Backend UpTask](https://github.com/codeRazX/UpTask--Backend)
