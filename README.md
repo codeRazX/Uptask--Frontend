@@ -57,4 +57,4 @@ This project includes both the **frontend** (React + TypeScript) and the **backe
 
 ---
 
-Backend is available is a [Backend UpTask](https://github.com/codeRazX/UpTask--Backend)
+Backend is available in a [Backend UpTask](https://github.com/codeRazX/UpTask--Backend)
