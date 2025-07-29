@@ -12,6 +12,8 @@ export const AuthSchema = z.object({
 type Auth = z.infer<typeof AuthSchema>
 export type UserLoginForm = Pick<Auth, 'email' | 'password'>
 export type UserRegistrationForm = Pick<Auth, 'email' | 'name' | 'password' | 'confirm_password'>
+export type UserRegistrationErrorsBackend = Partial<Record<keyof UserRegistrationForm, string>>
+export type UserLoginErrrosBackend = Pick<UserRegistrationErrorsBackend, 'email' | 'password'>
 export type RequestConfirmationTokenForm = Pick<Auth, 'email'>
 export type ForgotPasswordForm = Pick<Auth, 'email'>
 export type TokenType = {token: string}
@@ -75,6 +77,7 @@ export type Task = z.infer<typeof TaskSchema>
 export type TaskDashboard = z.infer<typeof TaskSchemaDashboard>
 export type TaskFormData = Pick<Task, 'description' | 'name'>
 export type TaskStatusType = z.infer<typeof TaskStatusSchema>
+export type TaskErrorsBackend = Partial<Record<keyof TaskFormData, string>>
 
 
 /*TYPES PROJECTS*/ 
@@ -100,6 +103,7 @@ export const DashboardProjectsSchema = z.array(DashboardProjectSchema)
 export type Project = z.infer<typeof ProjectSchema>
 export type DashboardProject = z.infer<typeof DashboardProjectSchema>
 export type ProjectFormData = Pick<Project, 'projectName' | 'clientName' | 'description'>
+export type ProjectErrorsBackend = Partial<Record<keyof ProjectFormData, string>> 
 
 
 /*TYPES TEAM*/
